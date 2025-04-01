@@ -2,7 +2,7 @@
 
 % margins
 \usepackage{geometry}
-\geometry{scale=0.9}
+\geometry{margin=0.5in}
 
 % header color
 \usepackage[dvipsnames]{xcolor}
@@ -62,14 +62,16 @@
     \faLinkedinIn\ \href{https://linkedin.com/in/aokellermann}{linkedin.com/in/aokellermann}
 \end{center}
 
+\vspace{0.5em}\rule{\textwidth}{0.4pt}\vspace{1em}
+
 %----------Work----------
 
 \textcolor{header}{\section*{Work}}\label{sec:work}
 
-\datedsubsection{AI Safety Researcher @ \href{https://ddkang.github.io/}{Kang Lab}, \href{https://illinois.edu/}{UIUC}}{Dec 2024 --- Present}
+\datedsubsection{AI Safety Researcher @ Kang Lab, \href{https://illinois.edu/}{UIUC}}{Dec 2024 --- Present}
 \begin{itemize}
     \item Designs and constructs AI agent benchmarks with \href{https://ddkang.github.io/}{Daniel Kang} and \href{https://www.nist.gov/aisi}{US AISI}
-    \item Conducts reinforcement learning experiments to study generalization across domains
+    \item Conducts fine-tuning experiments to study generalization across domains
 \end{itemize}
 
 \datedsubsection{Senior Software Engineer @ \href{https://www.crunchbase.com/organization/lendingtree}{LendingTree}}{Feb 2023 --- Sep 2024}
@@ -77,7 +79,8 @@
     \item Led development of multiple highest priority initiatives
     \item Implemented and released projects generating over \$600k per month in revenue
     \item Researched and wrote algorithms to optimize the core marketplace
-    \item Sped up CI pipelines by 2x
+    \item Sped up CI pipelines by 2x through parallelization and caching optimizations
+    \item Mentored junior engineers and conducted code reviews for critical system components
 \end{itemize}
 
 \datedsubsection{Software Engineer II @ \href{https://www.crunchbase.com/organization/lendingtree}{LendingTree}}{March 2021 --- Feb 2023}
@@ -112,13 +115,15 @@
 
 \textcolor{header}{\section*{Skills}}\label{sec:skills}
 
-\subsection*{Expert}
+\subsection*{Programming Languages}
+\begin{itemize}
+    \item Bash, C\# + ASP.NET, C++, JavaScript, Python
+\end{itemize}
 
-C\# and ASP.NET, C++, Docker, Git, Linux, OOP, Python, REST
-
-\subsection*{Intermediate}
-
-AWS, Bash, C, CI/CD, JavaScript, \LaTeX, MongoDB, RabbitMQ, SQL, Terraform
+\subsection*{Infrastructure}
+\begin{itemize}
+    \item AWS, Docker, Git, Linux, MongoDB, RabbitMQ, SQL, Terraform
+\end{itemize}
 
 %----------Education----------
 
