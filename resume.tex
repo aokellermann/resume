@@ -1,0 +1,132 @@
+\documentclass[11pt, letterpaper]{article}
+
+% margins
+\usepackage{geometry}
+\geometry{scale=0.9}
+
+% header color
+\usepackage[dvipsnames]{xcolor}
+\definecolor{header}{RGB}{41, 135, 199}
+
+% links
+\usepackage{hyperref}
+
+% website glyphs
+\usepackage{fontawesome5}
+
+% itemize tweaks
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=10pt, noitemsep, topsep=0.2em}
+
+% sections
+\usepackage{titlesec}
+
+% subsection with right aligned date
+\newcommand{\datedsubsection}[2]{
+    % allow date to right of section
+    \titleformat{\subsection}[runin]{\normalfont\normalsize\bfseries}{\thesection}{}{}
+    \subsection*{#1}
+    % align dates right of section
+    \hfill#2
+    % revert back to normal section
+    \titleformat{\subsection}[hang]{\normalfont\normalsize\bfseries}{\thesection}{}{}
+}
+
+% make item bullets smaller and center them
+\renewcommand\labelitemi{\tiny\raisebox{0.7ex}\textbullet}
+\renewcommand\labelitemii{\tiny\raisebox{0.7ex}\textbullet}
+
+% reduce section spacing a bit
+\titlespacing\section{0pt}{0pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{8pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+
+\begin{document}
+
+% remove page numbering
+\pagestyle{empty}
+
+% turn off paragraph indent
+\setlength{\parindent}{0pt}
+
+%----------Header----------
+
+\begin{center}
+    \textcolor{header}{\huge{Antony Kellermann}}
+
+    \bigskip
+
+    \faEnvelope[regular]\ \href{mailto:antony@aokellermann.dev}{antony@aokellermann.dev}
+    $|$
+    \faGithub\ \href{https://github.com/aokellermann}{github.com/aokellermann}
+    $|$
+    \faLinkedinIn\ \href{https://linkedin.com/in/aokellermann}{linkedin.com/in/aokellermann}
+\end{center}
+
+%----------Work----------
+
+\textcolor{header}{\section*{Work}}\label{sec:work}
+
+\datedsubsection{AI Safety Researcher @ \href{https://ddkang.github.io/}{Kang Lab}, \href{https://illinois.edu/}{UIUC}}{Dec 2024 --- Present}
+\begin{itemize}
+    \item Designs and constructs AI agent benchmarks with \href{https://ddkang.github.io/}{Daniel Kang} and \href{https://www.nist.gov/aisi}{US AISI}
+    \item Conducts reinforcement learning experiments to study generalization across domains
+\end{itemize}
+
+\datedsubsection{Senior Software Engineer @ \href{https://www.crunchbase.com/organization/lendingtree}{LendingTree}}{Feb 2023 --- Sep 2024}
+\begin{itemize}
+    \item Led development of multiple highest priority initiatives
+    \item Implemented and released projects generating over \$600k per month in revenue
+    \item Researched and wrote algorithms to optimize the core marketplace
+    \item Sped up CI pipelines by 2x
+\end{itemize}
+
+\datedsubsection{Software Engineer II @ \href{https://www.crunchbase.com/organization/lendingtree}{LendingTree}}{March 2021 --- Feb 2023}
+\begin{itemize}
+    \item Architected new scalable and extensible features into RESTful microservices
+    \item Led an engineering team through integrating new products into the core platform
+    \item Presented software designs and held architecture reviews
+    \item Documented features using diagrams in PlantUML and Graphviz
+\end{itemize}
+
+\datedsubsection{Software Engineer @ \href{https://www.crunchbase.com/organization/asm-nexx}{ASM Nexx}}{May 2019 --- Aug 2020}
+\begin{itemize}
+    \item Spearheaded application development of semiconductor manufacturing prototypes
+    \item Implemented and optimized parallelized automation scheduler
+    \item Incorporated software interlocks and corresponding fault injection
+    \item Collaborated with research engineers to perform experimental workflows
+\end{itemize}
+
+\textcolor{header}{\section*{Publications}}\label{sec:publications}
+
+\datedsubsection{\href{https://arxiv.org/abs/2503.17332}{CVE-Bench: A Benchmark for AI Agents' Ability to Exploit Real-\\ World Web Application Vulnerabilities}}{2025}
+\begin{itemize}
+    \item Authored a robust cybersecurity benchmark using \href{https://inspect.aisi.org.uk/}{Inspect} and Docker
+\end{itemize}
+
+\datedsubsection{\href{https://arxiv.org/abs/2406.01637}{Teams of LLM Agents can Exploit Zero-Day Vulnerabilities}}{2025}
+\begin{itemize}
+    \item Built a hierarchical LLM agent system using \href{https://www.langchain.com/}{LangChain}
+\end{itemize}
+
+%----------Skills----------
+
+\textcolor{header}{\section*{Skills}}\label{sec:skills}
+
+\subsection*{Expert}
+
+C\# and ASP.NET, C++, Docker, Git, Linux, OOP, Python, REST
+
+\subsection*{Intermediate}
+
+AWS, Bash, C, CI/CD, JavaScript, \LaTeX, MongoDB, RabbitMQ, SQL, Terraform
+
+%----------Education----------
+
+\textcolor{header}{\section*{Education}}\label{sec:education}
+
+\datedsubsection{\href{https://www.uml.edu/catalog/undergraduate/sciences/departments/computer-science/computer-science-major.aspx}{BSc in Computer Science} @ \href{https://www.uml.edu/}{UMass Lowell}}{Sep 2017 --- Dec 2020}
+\begin{itemize}
+    \item \href{https://www.uml.edu/catalog/undergraduate/sciences/departments/mathematical-sciences/mathematical-sciences-minor.aspx}{Minor in Mathematics}
+\end{itemize}
+
+\end{document}
